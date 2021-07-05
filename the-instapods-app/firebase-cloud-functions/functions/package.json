@@ -1,0 +1,56 @@
+{
+  "name": "functions",
+  "scripts": {
+    "dev": "export GOOGLE_APPLICATION_CREDENTIALS=\".env/GOOGLE_APPLICATION_CREDENTIALS.json\" && npx firebase emulators:start",
+    "dev-shell": "export GOOGLE_APPLICATION_CREDENTIALS=\".env/GOOGLE_APPLICATION_CREDENTIALS.json\" && npx firebase functions:shell",
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "load-firebase-creds": "firebase use the-instapods-app---prod && export GOOGLE_APPLICATION_CREDENTIALS=\".env/GOOGLE_APPLICATION_CREDENTIALS.json\"",
+    "load-apify-creds": "bash env/APIFY_CREDS.sh",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build-docs": "npx typedoc --out docs src && node typedocs-server.js",
+    "docs": "node typedocs-server.js"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@apollo/federation": "^0.13.2",
+    "@instapods/firestore-types": "file:../../@instapods/firestore-types",
+    "@types/uuid": "^7.0.0",
+    "apify-client": "^0.6.0",
+    "apollo-server": "^2.11.0",
+    "apollo-server-cloud-functions": "^2.10.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "3.6.0",
+    "graphql": "^14.6.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "firebase-functions-test": "^0.1.6",
+    "firebase-tools": "^7.14.0",
+    "husky": "^4.2.3",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

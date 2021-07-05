@@ -1,0 +1,4 @@
+schema: https://us-central1-the-instapods-app.cloudfunctions.net/graphql
+generates:
+  src/generated-types.ts:
+    - typescript

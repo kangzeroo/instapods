@@ -1,0 +1,5 @@
+IS_PRODUCTION=false
+WEB_CLIENT_ID=342373085484-outmgkk7cmfj44lbjmp06nr9kbpbpb36.apps.googleusercontent.com
+SMARTLOOK_API_KEY=65472d4c6e1767386991c77dd306f110664eebed
+BUNDLE_ID=com.instapods.the-instapods-app
+GRAPHQL_ENDPOINT=https:/$()/us-central1-the-instapods-app.cloudfunctions.net/graphql

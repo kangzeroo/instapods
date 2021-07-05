@@ -1,0 +1,67 @@
+{
+    "title": "Input schema for Instagram scraper",
+    "description": "Below you can provide search query which will be used to search Instagram for profiles, hashtags or places. Alternatively you can provide direct page urls. <br />Then on each page you can scrape page details, posts or comments. <br/> <strong>Important: Proxy is required to use this solution</strong>",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "search": {
+            "title": "Search",
+            "type": "string",
+            "description": "Here you can provide a search query which will be used to search Instagram for profiles, hashtags or places. <br /><br /><strong>This field is optional, but this field or 'Direct Instagram page URLs' must be provided (or both)</strong>",
+            "editor": "textfield",
+            "prefill": "Nature"
+        },
+        "searchType": {
+            "title": "Search type",
+            "type": "string",
+            "description": "What type of pages to search (you can search hashtags, profiles and places)",
+            "editor": "select",
+            "enum": ["user", "hashtag", "place"],
+            "enumTitles": ["Search users", "Search hashtags", "Search places"],
+            "default": "hashtag"
+        },
+        "searchLimit": {
+            "title": "Search results limit",
+            "type": "integer",
+            "description": "How many search results (eq. pages) should be processed",
+            "editor": "number",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 100
+        },
+        "directUrls": {
+            "title": "Direct Instagram page URLs",
+            "type": "array",
+            "description": "If you already have URL(s) of page(s) you wish to scrape, you can set them here. <br /><br /><strong>This field is optional, but this field or 'Search' must be provided (or both)</strong>",
+            "editor": "stringList",
+            "placeholderValue": "URL",
+            "patternValue": "https:\\/\\/www\\.instagram\\.com\\/.+",
+            "uniqueItems": true
+        },
+        "resultsType": {
+            "title": "What to scrape from each page",
+            "type": "string",
+            "description": "What to scrape from each Instagram page URL or search result",
+            "editor": "select",
+            "enum": ["posts", "comments", "details"],
+            "enumTitles": ["Posts", "Comments", "Details"],
+            "default": "posts"
+        },
+        "resultsLimit": {
+            "title": "Max items",
+            "type": "integer",
+            "description": "How many posts or comments to scrape from each Instagram URL or found page, ignored when \"Details\" type is specified",
+            "editor": "number",
+            "unit": "per page",
+            "default": 200
+        },
+        "proxy": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "<strong>Proxy is required to run this actor!</strong> Either use Apify proxy, or provide your own proxy servers.",
+            "prefill": { "useApifyProxy": true, "apifyProxyGroups": [] },
+            "editor": "proxy"
+        }
+    },
+    "required": ["proxy"]
+}

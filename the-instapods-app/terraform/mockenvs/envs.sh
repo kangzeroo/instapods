@@ -1,0 +1,2 @@
+export TF_VAR_project_id=_______PROJECT_ID_______
+export TF_VAR_environment=_____stage_____

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "342373085484",
+    "firebase_url": "https://the-instapods-app.firebaseio.com",
+    "project_id": "the-instapods-app",
+    "storage_bucket": "the-instapods-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342373085484:android:c8ab5b316f380d7cbbbc89",
+        "android_client_info": {
+          "package_name": "com.instapodsmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342373085484-32p73fhha9mad28538cfbko6r3ragtaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.instapodsmobile",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "338405913852-6fgn36dlr8m7gcc9o4vr7alfq5b1sjfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4vgpHHBjp-I2440eWIfJVWj-XaGUn7hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338405913852-6fgn36dlr8m7gcc9o4vr7alfq5b1sjfm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "342373085484-outmgkk7cmfj44lbjmp06nr9kbpbpb36.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.instapods.the-instapods-app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

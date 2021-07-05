@@ -1,0 +1,29 @@
+{
+	"name": "instagram-scraper",
+	"version": "0.0.1",
+	"description": "Crawls through instagram pages and stores posts, comments and details",
+	"main": "main.js",
+	"dependencies": {
+		"apify": "^0.13.7",
+		"apify-client": "^0.6.0",
+		"cross-blob": "^1.2.1",
+		"dotenv": "^8.2.0",
+		"firebase-admin": "^8.10.0",
+		"moment": "^2.24.0",
+		"request-promise-native": "^1.0.7"
+	},
+	"devDependencies": {
+		"eslint": "^5.16.0"
+	},
+	"scripts": {
+		"start": "node main.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gippy/instagram-scraper.git"
+	},
+	"author": "Jaroslav Hejlek",
+	"license": "ISC",
+	"homepage": "https://github.com/gippy/instagram-scraper"
+}

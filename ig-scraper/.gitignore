@@ -1,0 +1,5 @@
+apify_storage
+node_modules
+scripts/creds/*
+scripts/env.json
+scripts/.env

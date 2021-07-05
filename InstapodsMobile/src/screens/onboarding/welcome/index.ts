@@ -1,0 +1,6 @@
+export { default as HowItWorksOnboarding } from './how-it-works.component'
+export { default as WelcomeToInstapodsOnboarding } from './welcome-to-instapods.component'
+export { default as CommunityGuidelinesOnboarding } from './community-guidelines.component'
+export { default as VerifyYourAccountOnboarding } from './verify-your-account.component'
+export { default as InitialLoadingScreenOnboarding } from './initial-loading-screen.component'
+export { default as NextStepsOnboarding } from './next-steps.component'
